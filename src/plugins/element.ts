@@ -8,8 +8,9 @@ import ElementPlus from "element-plus";
 import "element-plus/dist/index.css";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 import "dayjs/locale/zh-cn";
+
 export default {
-    install: (app:import("vue").App<any>) => {
+    install: (app: import("vue").App<Element>) => {
         app.use(ElementPlus, {
             locale: zhCn,
             size: "default",
