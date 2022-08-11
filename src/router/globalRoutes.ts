@@ -6,9 +6,13 @@ import {RouteRecordRaw} from 'vue-router'
 
 const globalRoutes: Array<RouteRecordRaw> = [
     {
+        path: "/",
+        redirect: '/login'
+    },
+    {
         path: "/login",
-        name: "Login",
-        component: () => import("@/views/login.vue"),
+        name: "login",
+        component: () => import("@/views/login/index.vue"),
     },
     {
         path: "/404",

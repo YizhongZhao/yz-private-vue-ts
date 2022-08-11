@@ -1,7 +1,8 @@
 import cookie from 'js-cookie'
 import {config} from '@/config'
 
-const {tokenTableName, storage} = config
+const {tokenTableName, storage, pickedRole, pickedCorpId} = config
+
 
 //获取token
 export function getToken(): string | null | undefined {
@@ -34,5 +35,60 @@ export function setToken(token: string): void {
         }
     } else {
         return localStorage.setItem(tokenTableName, token)
+    }
+}
+
+
+// 移除token
+export function removeToken() {
+    removePickedRole()
+    removePickedCorpId()
+    if (storage) {
+        if ('localStorage' === storage) {
+            return localStorage.removeItem(tokenTableName)
+        } else if ('sessionStorage' === storage) {
+            return sessionStorage.clear()
+        } else if ('cookie' === storage) {
+            return cookie.remove(tokenTableName)
+        } else {
+            return localStorage.removeItem(tokenTableName)
+        }
+    } else {
+        return localStorage.removeItem(tokenTableName)
+    }
+}
+
+// 移除role
+export function removePickedRole() {
+    if (storage) {
+        if ('localStorage' === storage) {
+            return localStorage.removeItem(pickedRole)
+        } else if ('sessionStorage' === storage) {
+            return sessionStorage.clear()
+        } else if ('cookie' === storage) {
+            return cookie.remove(pickedRole)
+        } else {
+            return localStorage.removeItem(pickedRole)
+        }
+    } else {
+        return localStorage.removeItem(pickedRole)
+    }
+}
+
+// 移除pickedCorpId
+
+export function removePickedCorpId() {
+    if (storage) {
+        if ('localStorage' === storage) {
+            return localStorage.removeItem(pickedCorpId)
+        } else if ('sessionStorage' === storage) {
+            return sessionStorage.clear()
+        } else if ('cookie' === storage) {
+            return cookie.remove(pickedCorpId)
+        } else {
+            return localStorage.removeItem(pickedCorpId)
+        }
+    } else {
+        return localStorage.removeItem(pickedCorpId)
     }
 }
