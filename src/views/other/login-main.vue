@@ -31,19 +31,13 @@
             <el-col :offset="1" :span="5" class="mt-2">
               <el-button disabled type="primary">获取验证码</el-button>
             </el-col>
+            <el-col :offset="4" :span="16" class="mt-2">
+              <el-button style="width: 100%" type="primary" @click="login">登录</el-button>
+            </el-col>
           </el-row>
         </el-tab-pane>
         <el-tab-pane label="短信登录" name="phoneNumberLogin">
-          <el-row>
-            <el-col :offset="4" :span="16">
-              <el-input/>
-            </el-col>
-          </el-row>
-          <el-row>
-            <el-col :offset="4" :span="8">
-              <el-input/>
-            </el-col>
-          </el-row>
+
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -58,10 +52,14 @@ export default {
 <script lang="ts" setup>
 import {ref} from 'vue'
 import type {TabsPaneContext} from 'element-plus'
+import router from "@/plugins/router";
 
 const activeName = ref('accountLogin')
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)
+}
+const login = () => {
+  router
 }
 </script>
 

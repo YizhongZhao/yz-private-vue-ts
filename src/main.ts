@@ -3,6 +3,8 @@ import App from './App.vue'
 
 // 引入样式类
 import 'normalize.css/normalize.css'
+import "tailwindcss/tailwind.css"
+
 // 引入三方库
 import elementIcon from "@/plugins/element-icon";
 import element from "@/plugins/element";
@@ -16,3 +18,4 @@ app.use(elementIcon)
     .use(pinia)
     .use(router)
     .mount('#app')
+

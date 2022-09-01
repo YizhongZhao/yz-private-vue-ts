@@ -7,7 +7,7 @@
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 export default {
-    install: (app: import("vue").App<any>) => {
+    install: (app: import("vue").App) => {
         for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
             app.component(`el-icon-${key}`, component)
         }
