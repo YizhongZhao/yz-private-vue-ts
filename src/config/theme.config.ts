@@ -5,7 +5,7 @@
  * @warning:
  */
 
-
+// 定义配置项形状
 interface IThemeConfig {
     // 布局方式
     layout: LayOutStyle,
@@ -16,7 +16,9 @@ interface IThemeConfig {
     // 是否开启刷新组件
     showRefresh: boolean,
     // 是否开启请求进度条
-    showNProgress: boolean
+    showNProgress: boolean,
+    // 是否开启黑暗模式
+    darkModeOpen: boolean,
 }
 
 // 布局方式枚举
@@ -32,9 +34,12 @@ enum TabsBarStyle {
     SMOOTH = 'smooth'
 }
 
+
+// 初始化配置
 export const themeConfig: IThemeConfig = {
     layout: LayOutStyle.COMMON,
     showTabsBar: false,
     showRefresh: false,
-    showNProgress: true
+    showNProgress: true,
+    darkModeOpen: true
 }

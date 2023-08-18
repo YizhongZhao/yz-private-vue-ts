@@ -16,7 +16,7 @@ const globalRoutes: Array<RouteRecordRaw> = [
         component: () => import("@/views/home.vue"),
         beforeEnter: (to, form, next) => {
             if (to) {
-                naiveui.message.info('测试');
+                naiveui.message.success('测试');
             } else {
                 console.log(form)
             }

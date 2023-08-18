@@ -5,24 +5,21 @@
 -->
 
 <template>
-  <NButton style="float: right">夜间模式</NButton>
-  <el-row style="height: 100%;">
-    <el-col :span="6">
-      <LayoutMenu/>
-    </el-col>
-    <el-col :span="6">
-      <NButton>111</NButton>
-      <NButton>222</NButton>
+  <div>
+    <div class="text-yellow-200">1111</div>
+    <div class="text-yellow-200">1111</div>
+    <div class="text-yellow-200">1111</div>
+    <Son :width="'500px'"/>
+  </div>
 
-    </el-col>
-  </el-row>
 </template>
 
 
 <script lang="ts" setup>
-import {NButton} from 'naive-ui'
-import LayoutMenu from '@/components/layout/layout-menu.vue'
+import Son from '@/components/son.vue'
+
 </script>
+
 <style lang="scss" scoped>
 
 </style>

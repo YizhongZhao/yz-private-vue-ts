@@ -5,6 +5,14 @@
  * @warning:
  */
 
+// store中每个modules的name
 export const enum Names {
-    USER = 'USER'
+    USER = 'USER',
+    STATUS = 'STATUS'
+}
+
+// status =======
+export enum ThemeEnum {
+    DARK = 'dark',
+    LIGHT = 'light',
 }

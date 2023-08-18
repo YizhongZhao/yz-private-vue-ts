@@ -1,16 +1,12 @@
-import type {DialogApiInjection} from "naive-ui/es/dialog/src/DialogProvider";
 import type {MessageApiInjection} from "naive-ui/es/message/src/MessageProvider";
+import {Nullable} from "#/gobal";
 
-interface Naiveui {
-    message: MessageApiInjection,
-    dialog: DialogApiInjection
+interface NaiveUi {
+    message: Nullable<MessageApiInjection>,
 }
 
-const naiveui: Naiveui = {
-    //@ts-ignore
-    message: {},
-    //@ts-ignore
-    dialog: {}
+const naiveui: NaiveUi = {
+    message: null,
 }
 
 export default naiveui;
