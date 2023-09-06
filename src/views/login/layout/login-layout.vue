@@ -15,6 +15,7 @@ import SvgIcon from "@/components/global/svg-icon.vue";
         <div>
           <svg-icon
             class="
+
               w-6
               h-6
               items-center
