@@ -20,7 +20,6 @@ export default {
 import {init} from 'echarts';
 import * as echarts from 'echarts'
 import {onMounted, ref} from "vue";
-import {Nullable} from '#/gobal'
 import * as obama_budget_2012 from '@/views/tabledata.json'
 
 console.log(echarts)

@@ -8,7 +8,12 @@ import naiveui from '@/utils/naiveui';
 const globalRoutes: Array<RouteRecordRaw> = [
     {
         path: "/",
-        redirect: '/home'
+        redirect: '/login'
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: () => import("@/views/login/index.vue"),
     },
     {
         path: "/home",

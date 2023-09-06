@@ -1,1 +1,5 @@
-export declare type Nullable<T> = T | null;
+export {}
+
+declare global {
+    declare type Nullable<T> = T | null;
+}
