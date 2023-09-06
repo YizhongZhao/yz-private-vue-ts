@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import {NMessageProvider} from 'naive-ui'
-import MessageApi from './components/message-api.vue';
-
+  import { NMessageProvider } from 'naive-ui';
+  import MessageApi from './components/message-api.vue';
 </script>
 
 <template>
@@ -12,7 +11,9 @@ import MessageApi from './components/message-api.vue';
 </template>
 
 <style>
-html, body, #app {
-  height: 100%;
-}
+  html,
+  body,
+  #app {
+    height: 100%;
+  }
 </style>

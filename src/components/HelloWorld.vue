@@ -15,45 +15,43 @@
       </el-row>
     </el-form>
     <el-button @click="login">登录</el-button>
-    <el-button v-if="route.name==='Login'" type="primary" @click="back">返回</el-button>
+    <el-button v-if="route.name === 'Login'" type="primary" @click="back">返回</el-button>
   </el-card>
 </template>
 
 <script lang="ts" setup>
-import {ref} from 'vue'
-import {useUserStore} from '@/store/user'
-import {useRouter, useRoute} from "vue-router";
+  import { ref } from 'vue';
+  import { useUserStore } from '@/store/user';
+  import { useRouter, useRoute } from 'vue-router';
 
-const User = useUserStore()
-const router = useRouter()
-const route = useRoute()
+  const User = useUserStore();
+  const router = useRouter();
+  const route = useRoute();
 
-const userName = ref('')
-const passWord = ref('')
+  const userName = ref('');
+  const passWord = ref('');
 
+  const login = () => {
+    User.setUserName(userName.value);
+    User.setPassWord(passWord.value);
+    router.push({
+      name: 'login',
+    });
+  };
 
-const login = () => {
-  User.setUserName(userName.value)
-  User.setPassWord(passWord.value)
-  router.push({
-    name: 'login'
-  })
-}
-
-const back = () => {
-  User.setUserName('')
-  User.setPassWord('')
-  router.push({
-    name: '404'
-  })
-}
-
+  const back = () => {
+    User.setUserName('');
+    User.setPassWord('');
+    router.push({
+      name: '404',
+    });
+  };
 </script>
 
 <style lang="scss" scoped>
-.card {
-  width: 1000px;
-  margin: 60px auto;
-  font-size: 16px
-}
+  .card {
+    width: 1000px;
+    margin: 60px auto;
+    font-size: 16px;
+  }
 </style>

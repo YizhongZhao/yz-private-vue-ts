@@ -4,14 +4,14 @@
  * @Description: axios相关配置
  * @warning:
  */
-import {INetConfig} from '#/config'
-import {ContentType} from '@/enums/configEnums'
+import { INetConfig } from '#/config';
+import { ContentType } from '@/enums/configEnums';
 
 export const netConfig: INetConfig = {
-    // 基础路径
-    baseURL: 'https://dev-api-sy-bdc-phoebe.lianjieabs.com',
-    // 超时时间 ms
-    requestTimeout: 5000,
-    // 请求头
-    contentType: ContentType.JSON,
-}
+  // 基础路径
+  baseURL: 'https://dev-api-sy-bdc-phoebe.lianjieabs.com',
+  // 超时时间 ms
+  requestTimeout: 5000,
+  // 请求头
+  contentType: ContentType.JSON,
+};

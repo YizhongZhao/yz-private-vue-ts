@@ -1,13 +1,13 @@
-import {useRouter} from "vue-router";
+import { useRouter } from 'vue-router';
 
-const router = useRouter()
+const router = useRouter();
 
 export function locationToLogin() {
-    setTimeout(() => {
-        router.push({name: 'login'})
-    }, 100)
+  setTimeout(() => {
+    router.push({ name: 'login' });
+  }, 100);
 }
 
 export function locationToUpPwd(query) {
-    router.push({path: '/update-pwd', query: query})
+  router.push({ path: '/update-pwd', query: query });
 }

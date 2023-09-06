@@ -5,18 +5,18 @@
 -->
 
 <template>
-  <el-row class="tac" style="height: 100%;">
+  <el-row class="tac" style="height: 100%">
     <el-col :span="12">
       <el-menu
-          class="el-menu-vertical-demo"
-          default-active="2"
-          @close="handleClose"
-          @open="handleOpen"
+        class="el-menu-vertical-demo"
+        default-active="2"
+        @close="handleClose"
+        @open="handleOpen"
       >
         <el-sub-menu index="1">
           <template #title>
             <el-icon>
-              <location/>
+              <location />
             </el-icon>
             <span>Navigator One</span>
           </template>
@@ -34,39 +34,39 @@
         </el-sub-menu>
         <el-menu-item index="2">
           <el-icon>
-            <icon-menu/>
+            <icon-menu />
           </el-icon>
           <span>Navigator Two</span>
         </el-menu-item>
         <el-menu-item disabled index="3">
           <el-icon>
-            <document/>
+            <document />
           </el-icon>
           <span>Navigator Three</span>
         </el-menu-item>
         <el-menu-item index="4">
           <el-icon>
-            <setting/>
+            <setting />
           </el-icon>
           <span>Navigator Four</span>
         </el-menu-item>
       </el-menu>
     </el-col>
-    <el-col :span="12" style="height: 100%;">
+    <el-col :span="12" style="height: 100%">
       <el-menu
-          active-text-color="#ffd04b"
-          background-color="#545c64"
-          class="el-menu-vertical-demo"
-          default-active="2"
-          style="height: 100%;"
-          text-color="#fff"
-          @close="handleClose"
-          @open="handleOpen"
+        active-text-color="#ffd04b"
+        background-color="#545c64"
+        class="el-menu-vertical-demo"
+        default-active="2"
+        style="height: 100%"
+        text-color="#fff"
+        @close="handleClose"
+        @open="handleOpen"
       >
         <el-sub-menu index="1">
           <template #title>
             <el-icon>
-              <location/>
+              <location />
             </el-icon>
             <span>Navigator One</span>
           </template>
@@ -84,19 +84,19 @@
         </el-sub-menu>
         <el-menu-item index="2">
           <el-icon>
-            <icon-menu/>
+            <icon-menu />
           </el-icon>
           <span>Navigator Two</span>
         </el-menu-item>
         <el-menu-item disabled index="3">
           <el-icon>
-            <document/>
+            <document />
           </el-icon>
           <span>Navigator Three</span>
         </el-menu-item>
         <el-menu-item index="4">
           <el-icon>
-            <setting/>
+            <setting />
           </el-icon>
           <span class="text-blue-600">Navigator Four</span>
         </el-menu-item>
@@ -106,17 +106,12 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@element-plus/icons-vue'
+  import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue';
 
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
+  const handleOpen = (key: string, keyPath: string[]) => {
+    console.log(key, keyPath);
+  };
+  const handleClose = (key: string, keyPath: string[]) => {
+    console.log(key, keyPath);
+  };
 </script>

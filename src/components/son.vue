@@ -7,26 +7,22 @@
 <template>
   <div>子组件</div>
   <div>{{ width }}</div>
-  <ElButton type="primary">
-    primary
-  </ElButton>
+  <ElButton type="primary"> primary </ElButton>
 </template>
 
 <script lang="ts">
-export default {
-  name: "son"
-}
+  export default {
+    name: 'Son',
+  };
 </script>
 <script lang="ts" setup>
-import {defineProps} from 'vue'
-import {ElButton} from "element-plus";
+  import { defineProps } from 'vue';
+  import { ElButton } from 'element-plus';
 
-const {width = '30%'} = defineProps<{
-  width: string
-  title?: string
-  dialogVisible?: boolean
-}>()
+  const { width = '30%' } = defineProps<{
+    width: string;
+    title?: string;
+    dialogVisible?: boolean;
+  }>();
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

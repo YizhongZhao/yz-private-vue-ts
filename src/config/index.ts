@@ -6,14 +6,14 @@
  */
 
 // 主题相关配置
-import {themeConfig} from './theme.config'
+import { themeConfig } from './theme.config';
 // axios相关配置
-import {netConfig} from './net.config'
+import { netConfig } from './net.config';
 // 其他配置
-import {settingConfig} from "@/config/setting.config";
+import { settingConfig } from '@/config/setting.config';
 
 export const config = {
-    ...themeConfig,
-    ...netConfig,
-    ...settingConfig
-}
+  ...themeConfig,
+  ...netConfig,
+  ...settingConfig,
+};

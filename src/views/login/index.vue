@@ -1,46 +1,61 @@
 <script lang="ts" setup>
-import LoginLayout from "@/views/login/layout/login-layout.vue";
-import { reactive } from "vue";
+  import LoginLayout from '@/views/login/layout/login-layout.vue';
+  import { reactive, ref } from 'vue';
+  import type { FormInstance, FormRules } from 'element-plus';
+  const ruleFormRef = ref<FormInstance>();
 
-const formInline = reactive({
-  user: "",
-  region: "",
-  date: "",
-});
+  const form = reactive({
+    account: '',
+    passWord: '',
+  });
+  const validateAccount = (_, value, callback) => {
+    if (!value) {
+      callback(new Error('请输入账号'));
+    } else {
+      callback();
+    }
+  };
+  const validatePassWord = (_, value, callback) => {
+    if (!value) {
+      callback(new Error('请输入密码'));
+    } else {
+      callback();
+    }
+  };
 
-const onSubmit = () => {
-  console.log("submit!");
-};
+  const rules = reactive<FormRules<typeof form>>({
+    account: [{ validator: validateAccount, trigger: 'blur' }],
+    passWord: [{ validator: validatePassWord, trigger: 'blur' }],
+  });
+
+  const onLogin = () => {
+    console.log(ruleFormRef);
+    console.log('submit!');
+  };
 </script>
 
 <template>
   <login-layout>
     <div class="flex justify-center items-center h-full">
-      <el-card class="w-80">
-        <el-form :model="formInline" @submit.prevent>
-          <el-form-item>
+      <el-card class="w-80" status-icon>
+        <el-form :model="form" :rules="rules" @submit.prevent>
+          <el-form-item prop="account">
+            <el-input v-model="form.account" clearable placeholder="账号" />
+          </el-form-item>
+          <el-form-item prop="passWord">
             <el-input
-              v-model="formInline.user"
+              v-model="form.passWord"
               clearable
-              placeholder="Approved by"
+              placeholder="密码"
+              show-password
+              type="password"
             />
           </el-form-item>
           <el-form-item>
-            <el-input
-              v-model="formInline.user"
-              clearable
-              placeholder="Approved by"
-            />
-          </el-form-item>
-          <el-form-item>
-            <el-button class="w-full" type="primary" @click="onSubmit"
-              >Query</el-button
-            >
+            <el-button class="w-full" type="primary" @click="onLogin">登录</el-button>
           </el-form-item>
         </el-form>
       </el-card>
     </div>
   </login-layout>
 </template>
-
-<style scoped></style>

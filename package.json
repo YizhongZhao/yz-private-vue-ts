@@ -2,11 +2,8 @@
   "name": "vue-ts",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
@@ -28,15 +25,22 @@
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
     "@vitejs/plugin-vue": "^2.3.4",
     "autoprefixer": "^10.4.15",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-vue": "^9.17.0",
     "postcss": "^8.4.29",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vite-plugin-svg-icons": "^2.0.1",
+    "vue-eslint-parser": "^9.3.1",
     "vue-tsc": "^0.38.9"
   }
 }

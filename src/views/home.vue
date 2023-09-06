@@ -6,10 +6,10 @@
 
 <template>
   <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
+    :default-active="activeIndex"
+    class="el-menu-demo"
+    mode="horizontal"
+    @select="handleSelect"
   >
     <el-menu-item index="1">Processing Center</el-menu-item>
     <el-sub-menu index="2">
@@ -29,13 +29,10 @@
   </el-menu>
 </template>
 
-
 <script lang="ts" setup>
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
+  const handleSelect = (key: string, keyPath: string[]) => {
+    console.log(key, keyPath);
+  };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

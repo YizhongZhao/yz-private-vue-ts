@@ -6,12 +6,12 @@
  */
 
 export enum ContentType {
-    JSON = 'application/json;charset=UTF-8',//Json
-    DEFAULT = 'application/x-www-form-urlencoded'//default
+  JSON = 'application/json;charset=UTF-8', //Json
+  DEFAULT = 'application/x-www-form-urlencoded', //default
 }
 
 export enum Storage {
-    COOKIE = 'cookie',//cookie
-    LOCALSTORAGE = 'localStorage',//cookie
-    SESSIONSTORAGE = 'sessionStorage',//cookie
+  COOKIE = 'cookie', //cookie
+  LOCALSTORAGE = 'localStorage', //cookie
+  SESSIONSTORAGE = 'sessionStorage', //cookie
 }

@@ -4,10 +4,10 @@
  * @Description: 自定义指令
  * @warning:
  */
-import {resize} from '@/directives/resize'
+import { resize } from '@/directives/resize';
 
 export default {
-    install: (app: import("vue").App<Element>) => {
-        app.directive('resize', resize);
-    },
+  install: (app: import('vue').App<Element>) => {
+    app.directive('resize', resize);
+  },
 };
