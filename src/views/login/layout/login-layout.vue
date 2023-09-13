@@ -18,7 +18,7 @@
       <div class="h-2/3">
         <slot></slot>
       </div>
-      <footer class="h-1/6 w-full">222</footer>
+      <footer class="h-1/6 w-full"></footer>
     </div>
   </div>
 </template>

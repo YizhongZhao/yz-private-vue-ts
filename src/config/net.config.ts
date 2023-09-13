@@ -9,7 +9,7 @@ import { ContentType } from '@/enums/configEnums';
 
 export const netConfig: INetConfig = {
   // 基础路径
-  baseURL: 'https://dev-api-sy-bdc-phoebe.lianjieabs.com',
+  baseURL: import.meta.env.VITE_APP_BASE_URL,
   // 超时时间 ms
   requestTimeout: 5000,
   // 请求头

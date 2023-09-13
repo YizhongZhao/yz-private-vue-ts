@@ -34,6 +34,7 @@ const err = (error) => {
           // 返回登录页面前，清除token
           removeToken();
           locationToLogin();
+          break;
         }
         case 'SESSION_EXPIRE': {
           // 返回登录页面前，设置token已在其他地方登录的状态参数
