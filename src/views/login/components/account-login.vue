@@ -2,6 +2,7 @@
   import { reactive, ref } from 'vue';
   import { FormInstance, FormRules } from 'element-plus';
   import { login } from './api';
+  import { ElMessage } from 'element-plus';
 
   const emits = defineEmits(['register']);
 
@@ -10,7 +11,6 @@
     passWord: '',
   });
   const ruleFormRef = ref<FormInstance>();
-
   const validateAccount = (_, value, callback) => {
     if (!value) {
       callback(new Error('请输入账号'));
@@ -32,16 +32,17 @@
 
   const btnLoading = ref<boolean>(false);
   const accountErrorMsg = ref<string>('');
+
   const onLogin = async () => {
     accountErrorMsg.value = null;
     try {
       btnLoading.value = true;
       await ruleFormRef.value.validate();
       await login({
-        username: form.account,
+        account: form.account,
         passWord: form.passWord,
       });
-      console.log('submit!');
+      ElMessage.success('登录成功！');
     } catch (e) {
       if (e.code === '100001') {
         accountErrorMsg.value = e.message;
