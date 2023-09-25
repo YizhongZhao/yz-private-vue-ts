@@ -6,7 +6,6 @@
 
   type LoginModel = 'login' | 'register';
   const model = ref<LoginModel>('login');
-
   const onRegister = () => {
     model.value = 'register';
   };

@@ -1,13 +1,7 @@
-<script lang="ts" setup>
-  import { NMessageProvider } from 'naive-ui';
-  import MessageApi from './components/message-api.vue';
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <n-message-provider>
-    <message-api></message-api>
-    <router-view></router-view>
-  </n-message-provider>
+  <router-view></router-view>
 </template>
 
 <style>

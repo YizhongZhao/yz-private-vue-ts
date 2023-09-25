@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import vueSetupExtend from 'vite-plugin-vue-setup-extend';
 import { resolve } from 'path';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 
@@ -15,6 +16,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       vue({ reactivityTransform: true }),
+      vueSetupExtend(),
       createSvgIconsPlugin({
         iconDirs: [resolve(process.cwd(), 'src/assets/icons')],
         symbolId: 'icon-[name]', // symbol的id

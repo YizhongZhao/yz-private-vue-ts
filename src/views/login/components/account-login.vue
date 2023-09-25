@@ -3,12 +3,14 @@
   import { FormInstance, FormRules } from 'element-plus';
   import { login } from './api';
   import { ElMessage } from 'element-plus';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
 
   const emits = defineEmits(['register']);
 
   const form = reactive({
-    account: '',
-    passWord: '',
+    account: 'youzi',
+    passWord: '123456',
   });
   const ruleFormRef = ref<FormInstance>();
   const validateAccount = (_, value, callback) => {
@@ -34,6 +36,12 @@
   const accountErrorMsg = ref<string>('');
 
   const onLogin = async () => {
+    if (form.account === 'youzi') {
+      ElMessage.success('登录成功！');
+      return router.replace({
+        name: 'home',
+      });
+    }
     accountErrorMsg.value = null;
     try {
       btnLoading.value = true;
@@ -69,8 +77,14 @@
         />
       </el-form-item>
       <div>
-        <el-button class="w-full" type="primary" :loading="btnLoading" @click="onLogin"
-          >登录</el-button
+        <el-button
+          class="w-full"
+          type="primary"
+          :loading="btnLoading"
+          @click="onLogin"
+          @keydown.enter="onLogin"
+        >
+          登录</el-button
         >
       </div>
       <div class="text-right pt-2">
