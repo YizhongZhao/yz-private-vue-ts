@@ -4,18 +4,18 @@
  * @Description: src/config文件夹用到的接口
  * @warning:
  */
-import {ContentType, Storage} from '@/enums/configEnums'
+import { ContentType, Storage } from '@/enums/configEnums';
 
 export interface INetConfig {
-    baseURL: string
-    requestTimeout: number
-    contentType: ContentType
+  baseURL: string;
+  requestTimeout: number;
+  contentType: ContentType;
 }
 
 export interface ISettingConfig {
-    tokenName: string
-    tokenTableName: string
-    storage: Storage
-    pickedCorpId: string
-    pickedRole: string
+  tokenName: string;
+  tokenTableName: string;
+  storage: Storage;
+  pickedCorpId: string;
+  pickedRole: string;
 }

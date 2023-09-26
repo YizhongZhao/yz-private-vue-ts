@@ -8,6 +8,9 @@ dependencies:
   '@element-plus/icons-vue':
     specifier: ^2.1.0
     version: registry.npmmirror.com/@element-plus/icons-vue@2.1.0(vue@3.3.4)
+  '@types/lodash-es':
+    specifier: ^4.17.9
+    version: registry.npmmirror.com/@types/lodash-es@4.17.9
   '@vueuse/core':
     specifier: ^8.9.4
     version: registry.npmmirror.com/@vueuse/core@8.9.4(vue@3.3.4)
@@ -32,6 +35,9 @@ dependencies:
   js-md5:
     specifier: ^0.7.3
     version: registry.npmmirror.com/js-md5@0.7.3
+  lodash-es:
+    specifier: ^4.17.21
+    version: registry.npmmirror.com/lodash-es@4.17.21
   naive-ui:
     specifier: ^2.34.4
     version: registry.npmmirror.com/naive-ui@2.34.4(vue@3.3.4)
